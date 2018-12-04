@@ -1,0 +1,55 @@
+\hypertarget{serv_8c}{\section{J\-:/new/project/src/serv.c File Reference}
+\label{serv_8c}\index{J\-:/new/project/src/serv.\-c@{J\-:/new/project/src/serv.\-c}}
+}
+{\ttfamily \#include $<$sys/socket.\-h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+{\ttfamily \#include $<$netdb.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/common.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{serv_8c_a5e8de6f51eb137a5e0adc6b8a6018140}{search\-\_\-tokenid} (struct \hyperlink{structdriver__info}{driver\-\_\-info} data)
+\item 
+void $\ast$ \hyperlink{serv_8c_ab3f2830f53550b44876ec3c8bd1c3dff}{serv} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdriver__info}{driver\-\_\-info} $\ast$ \hyperlink{serv_8c_a5ed63de40ab844373d6b87b9deef79ef}{driver}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{serv_8c_a5e8de6f51eb137a5e0adc6b8a6018140}{\index{serv.\-c@{serv.\-c}!search\-\_\-tokenid@{search\-\_\-tokenid}}
+\index{search\-\_\-tokenid@{search\-\_\-tokenid}!serv.c@{serv.\-c}}
+\subsubsection[{search\-\_\-tokenid}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf search\-\_\-tokenid} (
+\begin{DoxyParamCaption}
+\item[{struct {\bf driver\-\_\-info}}]{data}
+\end{DoxyParamCaption}
+)}}\label{serv_8c_a5e8de6f51eb137a5e0adc6b8a6018140}
+Search tokinid will search the tokien id for given driver information. 
+
+Definition at line 11 of file serv.\-c.
+
+\hypertarget{serv_8c_ab3f2830f53550b44876ec3c8bd1c3dff}{\index{serv.\-c@{serv.\-c}!serv@{serv}}
+\index{serv@{serv}!serv.c@{serv.\-c}}
+\subsubsection[{serv}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf serv} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{serv_8c_ab3f2830f53550b44876ec3c8bd1c3dff}
+Server will get the driver name \& mother name Return tokenid to Client. 
+
+Definition at line 26 of file serv.\-c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{serv_8c_a5ed63de40ab844373d6b87b9deef79ef}{\index{serv.\-c@{serv.\-c}!driver@{driver}}
+\index{driver@{driver}!serv.c@{serv.\-c}}
+\subsubsection[{driver}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf driver\-\_\-info}$\ast$ {\bf driver}}}\label{serv_8c_a5ed63de40ab844373d6b87b9deef79ef}
+
+
+Definition at line 9 of file main.\-c.
+

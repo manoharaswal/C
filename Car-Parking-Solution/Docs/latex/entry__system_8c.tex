@@ -1,0 +1,142 @@
+\hypertarget{entry__system_8c}{\section{J\-:/new/project/src/entry\-\_\-system.c File Reference}
+\label{entry__system_8c}\index{J\-:/new/project/src/entry\-\_\-system.\-c@{J\-:/new/project/src/entry\-\_\-system.\-c}}
+}
+{\ttfamily \#include \char`\"{}../include/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/struct.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}time.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{entry__system_8c_ab4fc0fd7a9f997249f3ddcfad9b186b2}{create\-\_\-memory\-\_\-entry\-\_\-info} (int c, int entnum)
+\item 
+void \hyperlink{entry__system_8c_a4495dc05e83654697965fa118f6345d2}{count\-\_\-info} (int flag)
+\item 
+void \hyperlink{entry__system_8c_aba9ff60e956cc1aaad3c10cc8030392b}{display\-\_\-driver\-\_\-info} (key\-\_\-t key)
+\item 
+void \hyperlink{entry__system_8c_a5bc350224303c06ffcadc189e0403150}{display\-\_\-entry\-\_\-info} (key\-\_\-t key)
+\item 
+void \hyperlink{entry__system_8c_ab04146e9e13a7d69b606348ae5f4b7cc}{create\-\_\-memory\-\_\-driver\-\_\-info} (int entnum)
+\item 
+void \hyperlink{entry__system_8c_abae3dae7381741b78b7de5a4fa222934}{car\-\_\-entry} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdriver__info}{driver\-\_\-info} $\ast$ \hyperlink{entry__system_8c_a5ed63de40ab844373d6b87b9deef79ef}{driver}
+\item 
+struct \hyperlink{structentry__system}{entry\-\_\-system} $\ast$ \hyperlink{entry__system_8c_ad1a48ade0ed3483866c3acee612b61c3}{entry}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{entry__system_8c_a31aeacad19264d9cad96c2ceb274456d}{mutex1} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\item 
+int \hyperlink{entry__system_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}
+\item 
+int \hyperlink{entry__system_8c_a15df9ba285cfd842f284025f904edc9c}{hour}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{entry__system_8c_abae3dae7381741b78b7de5a4fa222934}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!car\-\_\-entry@{car\-\_\-entry}}
+\index{car\-\_\-entry@{car\-\_\-entry}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{car\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf car\-\_\-entry} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_abae3dae7381741b78b7de5a4fa222934}
+Main thread for entry syatem Function for registring car entry for the parking and also generate waiting list if parking is full. 
+
+Definition at line 275 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_a4495dc05e83654697965fa118f6345d2}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!count\-\_\-info@{count\-\_\-info}}
+\index{count\-\_\-info@{count\-\_\-info}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{count\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf count\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_a4495dc05e83654697965fa118f6345d2}
+This function set and get the count value according to given flag F\-L\-A\-G\-S -\/ S\-E\-T\-\_\-\-C\-O\-U\-N\-T/\-G\-E\-T\-\_\-\-C\-O\-U\-N\-T 
+
+Definition at line 82 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_ab04146e9e13a7d69b606348ae5f4b7cc}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!create\-\_\-memory\-\_\-driver\-\_\-info@{create\-\_\-memory\-\_\-driver\-\_\-info}}
+\index{create\-\_\-memory\-\_\-driver\-\_\-info@{create\-\_\-memory\-\_\-driver\-\_\-info}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{create\-\_\-memory\-\_\-driver\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf create\-\_\-memory\-\_\-driver\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{int}]{entnum}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_ab04146e9e13a7d69b606348ae5f4b7cc}
+This function will copy driver data from memory in to structure and also add new information 
+
+Definition at line 211 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_ab4fc0fd7a9f997249f3ddcfad9b186b2}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!create\-\_\-memory\-\_\-entry\-\_\-info@{create\-\_\-memory\-\_\-entry\-\_\-info}}
+\index{create\-\_\-memory\-\_\-entry\-\_\-info@{create\-\_\-memory\-\_\-entry\-\_\-info}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{create\-\_\-memory\-\_\-entry\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf create\-\_\-memory\-\_\-entry\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{int}]{c, }
+\item[{int}]{entnum}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_ab4fc0fd7a9f997249f3ddcfad9b186b2}
+This function will fill the data from shared memory in to entry\-\_\-info and also aksked for new entry to fill further . Accept count in variable c and number of car in entnum Return type is void 
+
+Definition at line 26 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_aba9ff60e956cc1aaad3c10cc8030392b}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!display\-\_\-driver\-\_\-info@{display\-\_\-driver\-\_\-info}}
+\index{display\-\_\-driver\-\_\-info@{display\-\_\-driver\-\_\-info}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{display\-\_\-driver\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf display\-\_\-driver\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{key\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_aba9ff60e956cc1aaad3c10cc8030392b}
+This Function Display Driver Information according to given car is parked Accept key as an argument 
+
+Definition at line 130 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_a5bc350224303c06ffcadc189e0403150}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!display\-\_\-entry\-\_\-info@{display\-\_\-entry\-\_\-info}}
+\index{display\-\_\-entry\-\_\-info@{display\-\_\-entry\-\_\-info}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{display\-\_\-entry\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf display\-\_\-entry\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{key\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)}}\label{entry__system_8c_a5bc350224303c06ffcadc189e0403150}
+This Function Display car information present in shared memory 
+
+Definition at line 171 of file entry\-\_\-system.\-c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{entry__system_8c_a5ed63de40ab844373d6b87b9deef79ef}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!driver@{driver}}
+\index{driver@{driver}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{driver}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf driver\-\_\-info}$\ast$ {\bf driver}}}\label{entry__system_8c_a5ed63de40ab844373d6b87b9deef79ef}
+
+
+Definition at line 9 of file main.\-c.
+
+\hypertarget{entry__system_8c_ad1a48ade0ed3483866c3acee612b61c3}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!entry@{entry}}
+\index{entry@{entry}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{entry}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf entry\-\_\-system}$\ast$ {\bf entry}}}\label{entry__system_8c_ad1a48ade0ed3483866c3acee612b61c3}
+P\-R\-O\-G\-R\-A\-M N\-A\-M\-E \-: C\-A\-R P\-A\-R\-K\-I\-N\-G S\-Y\-S\-T\-E\-M\-: This program is developed in c programing language using ipc concepts like message queue, multithreading, mutex,shared memory etc. 
+
+Definition at line 8 of file main.\-c.
+
+\hypertarget{entry__system_8c_a15df9ba285cfd842f284025f904edc9c}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!hour@{hour}}
+\index{hour@{hour}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{hour}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf hour}}}\label{entry__system_8c_a15df9ba285cfd842f284025f904edc9c}
+
+
+Definition at line 19 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!min@{min}}
+\index{min@{min}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf min}}}\label{entry__system_8c_a3e202b201e6255d975cd6d3aff1f5a4d}
+
+
+Definition at line 19 of file entry\-\_\-system.\-c.
+
+\hypertarget{entry__system_8c_a31aeacad19264d9cad96c2ceb274456d}{\index{entry\-\_\-system.\-c@{entry\-\_\-system.\-c}!mutex1@{mutex1}}
+\index{mutex1@{mutex1}!entry_system.c@{entry\-\_\-system.\-c}}
+\subsubsection[{mutex1}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t {\bf mutex1} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}}\label{entry__system_8c_a31aeacad19264d9cad96c2ceb274456d}
+M\-U\-T\-E\-X L\-O\-C\-K I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R I\-N E\-N\-T\-R\-Y S\-Y\-S\-T\-E\-M 
+
+Definition at line 11 of file entry\-\_\-system.\-c.
+
